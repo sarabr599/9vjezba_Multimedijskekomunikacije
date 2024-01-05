@@ -1,0 +1,303 @@
+/*sveukupanizgled*/
+body {
+    padding-left: 400px;
+    justify-content: center;
+    align-items: center;
+}
+#sve{
+    display: flex;
+	width: 700px;
+	height: 1250px;
+	margin:10px;
+	padding:10px;
+	background-image: url("snijeg/pozadina1.jpg");
+	animation: snowy 9s linear infinite;
+	border: 5px solid rgba(85,107,47);   
+}
+
+/*glavni naslov*/
+.pokretninaslov{
+	font: normal 40px/50px Helvetica;
+	color: rgba(205,38,38);
+}
+.pokretninaslov p{
+	font: normal 40px/50px Helvetica;
+	float: left;
+}
+.pokretninaslov b{
+	float: left;
+	overflow: hidden;
+	height: 50px;
+	top: 100px;
+}
+.pokretninaslov .tekst{
+	color: rgba(205,38,38);
+	position: relative;
+	animation: move 5s infinite;
+	animation-delay: 1s;
+}
+@keyframes move{	
+  0%{
+	  top: 0px; 	  
+  }	
+  20%{
+	  top: -50px;
+  }
+  40%{
+	  top: -100px;  
+  }	
+  60%{
+	  top: -150px;
+  }  
+}
+
+/*pozadina-snijeg*/
+@keyframes snowy{
+	0%{
+		background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+	75%{
+		background-position: 325px 750px, 275px 600px, -5px 150px;
+	}
+	100%{
+		background-position: 500px 1000px, 400px 800px, 0px 300px;
+	}
+}
+
+/*lampice*/
+#lampice{
+    position: absolute;
+    margin: 200px 0 0 0;
+    padding: 0;
+    border-top: 3px solid rgba(85,107,47);
+    display: flex;
+}
+
+.lampica {
+    width: 47px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.lampica:nth-child(3n+1) {
+    background-color: rgba(255,0,0);
+    border: 2px solid rgba(205,0,0);
+    animation: blink 1s infinite;
+    animation-delay: 0.9s;
+}
+.lampica:nth-child(3n+2) {
+    background-color: rgba(255,215,0);
+    border: 2px solid rgba(255,165,0);
+    animation: blink 1s infinite;
+    animation-delay: 0.3s;
+}
+.lampica:nth-child(3n+3) {
+    background-color: rgba(85,107,47);
+    border: 2px solid rgba(47,79,47);
+    animation: blink 1s infinite;
+    animation-delay: 0.6s;
+}
+@keyframes blink{	
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/*drvce*/
+#drvce1{
+    position: absolute;
+    margin: 400px 0px 0px 250px;
+	width: 0px;
+    height: 0px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgba(85,107,47);
+    }
+#drvce2{
+    position: absolute;
+    margin: 450px 0px 0px 200px;
+	width: 0px;
+    height: 0px;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid rgba(85,107,47);
+    }
+#drvce3{
+    position: absolute;
+    margin: 500px 0px 0px 150px;
+	width: 0px;
+    height: 0px;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 400px solid rgba(85,107,47);
+    }	
+#zvijezda{
+    position: relative;
+    margin: 330px 0px 0px -34px;
+}
+#drvo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 900px 0px 0px -54px;
+    background-color: rgba(139,90,43);
+}
+
+/*kuglice*/
+.kuglica {
+    position: relative;
+}
+
+.kuglicaa1 {
+  top: 500px;
+  left: 750px;
+}
+.kuglicaa2 {
+  top: 550px;
+  left: 800px;
+}
+.kuglicaa3{
+  top: 600px;
+  left: 750px;
+}
+.kuglicaa4{
+  top: 650px;
+  left: 800px;
+}
+.kuglicaa5{
+  top: 700px;
+  left: 750px;
+}
+.kuglicaa6{
+  top: 750px;
+  left: 800px;
+}
+.kuglicaa7{
+  top: 800px;
+  left: 750px;
+}
+.kuglicaa8{
+  top: 850px;
+  left: 800px;
+}
+[class^="kuglicaa"]:nth-child(3n+1) {
+	position: absolute;
+    background-color: rgba(255,255,255);
+	width: 30px;
+    height: 30px;
+	border: 2px solid rgba(255,0,0);
+    border-radius: 100%;
+    }
+[class^="kuglicaa"]:nth-child(3n+2) {
+	position: absolute;
+    background-color: rgba(255,0,0);
+	width: 30px;
+    height: 30px;
+	border: 2px solid rgba(128,0,0);
+    border-radius: 100%;
+    }
+[class^="kuglicaa"]:nth-child(3n+3) {
+	position: absolute;
+    background-color: rgba(128,0,0);
+	width: 30px;
+    height: 30px;
+	border: 2px solid rgba(255,0,0);
+    border-radius: 100%;
+    }	
+
+/*svjetla na drvcu*/
+#svjetla{
+    position: absolute;
+}
+.svjetlo1{
+	top: 450px;
+    left: 350px;
+}
+.svjetlo2{
+	top: 550px;
+    left: 300px;
+}
+.svjetlo3{
+	top: 670px;
+    left: 270px;
+}
+.svjetlo4{
+	top: 690px;
+    left: 430px;
+}
+.svjetlo5{
+	top: 800px;
+    left: 240px;
+}
+.svjetlo6{
+	top: 820px;
+    left: 460px;
+}
+
+[class^="svjetlo"]:nth-child(2n+1) {
+	position: absolute;
+    background-color: rgba(255,215,0);
+	width: 10px;
+    height: 10px;
+    border-radius: 100%;
+	transition-property: background;
+    animation:light 4s infinite;
+    animation-delay: 0.9s;
+    }
+[class^="svjetlo"]:nth-child(2n+2) {
+	position: absolute;
+    background-color: rgba(240,230,140);
+	width: 10px;
+    height: 10px;
+    border-radius: 100%;
+	transition-property: background;
+    animation:light 4s infinite;
+    animation-delay: 0.1s;
+    }
+@keyframes light{	
+  0%   {
+	  box-shadow: 0 0 20px rgba(255,255,1),
+				  0 0 30px rgba(255,255,1);
+  }
+  50%  {
+	  opacity:0;
+	 
+}
+  100%   {
+	  box-shadow: 0 0 20px rgba(255,255,1),
+				  0 0 30px rgba(255,255,1);
+	  }
+}
+
+/*paragraf*/
+#paragraf{
+	width: 500px;
+    height: 200px;
+	font-size: 18px;
+    position: relative;
+    animation: movee 5s infinite;
+	position: absolute;
+	margin: 1000px 0 0 0;
+	padding-left: 20px;
+}
+
+#paragraf > p{
+	 font: Arial;
+     color: white;	
+	 font-style: italic;
+	 font-size: 18px;
+}
+.tekstparagrafa + span {
+	 font: Arial;
+     color: rgba(139,0,0);
+	 font-weight: bold;
+     font-size: 21px;
+}
+
+@keyframes movee {
+  0%   {top: 0px; left: 450px; background: rgba(255,0,0,0.7);}
+  25%  {top: 0px; left: 600px; background: rgba(255,140,0,0.7);}
+  50%  {top: 50px; left: 600px; background: rgba(147,112,219,0.7);}
+  75%  {top: 50px; left: 450px; background: rgba(85,107,47,0.7);}
+  100% {top: 0px; left: 450px; background: rgba(255,0,0,0.7);}
+}
